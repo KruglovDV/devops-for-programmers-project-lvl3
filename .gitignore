@@ -1,0 +1,5 @@
+secret.tfvars
+terraform/.terraform
+terraform/terraform.tfstate
+terraform/*.backup
+terraform/*.auto.tfvars
