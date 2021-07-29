@@ -5,8 +5,6 @@
     state: present
     update_cache: yes
 
-- name: Install docker-py
+- name: Install docker
   pip:
-    name: docker-py
-    version: 1.8.0
-    state: present
+    name: docker
