@@ -43,7 +43,7 @@ resource "digitalocean_loadbalancer" "public" {
 }
 
 resource "digitalocean_domain" "default" {
-  name = "somedomain.club"
+  name = "devandops.club"
 }
 
 resource "digitalocean_certificate" "cert" {
