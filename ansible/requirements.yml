@@ -4,5 +4,3 @@ collections:
 roles:
   - name: datadog.datadog
     version: 4.10.0
-  - name: geerlingguy.pip
-    version: 2.1.0

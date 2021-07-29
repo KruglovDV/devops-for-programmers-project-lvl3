@@ -1,10 +1,9 @@
 ---
 - name: Install packages
   apt:
-    pkg:
-      - docker.io
+    name: python3-pip
     update_cache: yes
 
-- name: Install pip
-  include_role:
-    name: geerlingguy.pip
+- name: Install Docker Module for Python
+  pip:
+    name: docker
