@@ -1,9 +1,12 @@
 ---
-- name: Install packages
+- name: Install pip
   apt:
     name: python3-pip
+    state: present
     update_cache: yes
 
-- name: Install Docker Module for Python
+- name: Install docker-py
   pip:
-    name: docker
+    name: docker-py
+    version: 1.8.0
+    state: present

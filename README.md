@@ -7,7 +7,7 @@
 - Ansible 2.9.8 или выше
 
 ## Развернутое приложение
-https://somedomain.club
+https://devandops.club
 
 ## Команды
 ```

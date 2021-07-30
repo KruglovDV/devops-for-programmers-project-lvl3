@@ -5,7 +5,7 @@ data "digitalocean_ssh_key" "devops" {
 resource "digitalocean_droplet" "web" {
   count    = 2
   image    = "docker-20-04"
-  name     = format("project-%02d", count.index + 1)
+  name     = format("app-%02d", count.index + 1)
   region   = "ams3"
   size     = "s-1vcpu-1gb"
   ssh_keys = [data.digitalocean_ssh_key.devops.id]
@@ -19,7 +19,7 @@ resource "digitalocean_loadbalancer" "public" {
     entry_port     = 80
     entry_protocol = "http"
 
-    target_port     = 5000
+    target_port     = 8080
     target_protocol = "http"
   }
 
@@ -27,14 +27,14 @@ resource "digitalocean_loadbalancer" "public" {
     entry_port     = 443
     entry_protocol = "https"
 
-    target_port     = 5000
+    target_port     = 8080
     target_protocol = "http"
 
     certificate_name = digitalocean_certificate.cert.name
   }
 
   healthcheck {
-    port     = 5000
+    port     = 8080
     protocol = "http"
     path     = "/"
   }

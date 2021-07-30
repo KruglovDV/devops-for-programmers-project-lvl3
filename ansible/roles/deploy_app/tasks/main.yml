@@ -3,11 +3,10 @@
   community.docker.docker_container:
     name: App
     image: hexletcomponents/devops-example-app
-    ports:
-      - "5000:5000"
-    restart_policy: always
     restart: yes
     pull: yes
     container_default_behavior: no_defaults
+    ports:
+      - "8080:5000"
     env:
       SERVER_MESSAGE: "{{ app_message }}"
