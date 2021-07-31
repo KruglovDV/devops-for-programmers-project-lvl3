@@ -11,14 +11,20 @@ https://devandops.club
 
 ## Команды
 ```
-make terraform-apply
+make terraform-init
+```
+```
+make ansible-galaxy-install
 ```
 ```
 make terraform-plan
 ```
 ```
-make terraform-destroy
+make terraform-apply
 ```
 ```
 make deploy
+```
+```
+make terraform-destroy
 ```

@@ -16,3 +16,5 @@ datadog_checks:
         url: http://localhost:5000
         timeout: 5
         method: GET
+
+app_port: "8080"

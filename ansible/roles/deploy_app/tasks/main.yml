@@ -7,6 +7,6 @@
     pull: yes
     container_default_behavior: no_defaults
     ports:
-      - "8080:5000"
+      - "{{ app_port }}:5000"
     env:
       SERVER_MESSAGE: "{{ app_message }}"

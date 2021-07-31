@@ -1,3 +1,9 @@
+terraform-init:
+	cd terraform && terraform init
+
+ansible-galaxy-install:
+	ca ansible && ansible-galaxy install -r requirements.yml
+
 terraform-apply:
 	cd terraform && terraform apply
 
