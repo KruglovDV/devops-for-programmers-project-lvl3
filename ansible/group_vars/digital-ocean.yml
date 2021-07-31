@@ -17,4 +17,4 @@ datadog_checks:
         timeout: 5
         method: GET
 
-app_port: "8080"
+app_port: 8080
